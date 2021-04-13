@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8">
+	<title>연산자</title>
+	<script type="text/javascript">
+		var num1 = 15;
+		var num2 = 2;
+		
+		var result;
+		result = num1 + num2;
+		document.write(result + "<br>");
+		
+		result = num1 - num2;
+		document.write(result + "<br>");
+		
+		result = num1 * num2;
+		document.write(result + "<br>");
+		
+		result = num1 / num2;
+		document.write(result + "<br>");
+		
+		result = num1 % num2;
+		document.write(result + "<br>");
+		
+		var t1 = "학교종이";
+		var t2 = "땡땡땡";
+		var t3 = 8282; // 숫자형과 문자형이 섞이면 문자형 data로 저장됨
+		var t4 = "어서 모이자";
+		
+		result = t1 + t2 + t3 + t4;
+		document.write(result);
+		
+		document.write("<br>")
+		
+		var number1 = 10;
+		var number2 = 3;
+		
+		number1 += number2;
+		document.write(number1 + "<br>");
+		
+		number1 -= number2; // number1이 위에서 13이 됐기 때문에 결과는 10이 나옴
+		document.write(number1 + "<br>");
+		
+		number1 *= number2;
+		document.write(number1 + "<br>");
+		
+		number1 %= number2;
+		document.write(number1 + "<br>");
+		
+		
+		var str = "<table border = '1'>";
+		str += "<tr>"
+		str += "<td>1</td> <td>2</td> <td>3</td>"
+		str += "</tr>"
+		str += "</table>"
+		
+		document.write(str)
+		
+		// operator prior
+		var a = 10;
+		var b = 20;
+		var m = 30;
+		var n = 40;
+		
+		result = a > b || b >= m || m > n;
+		document.write(result + "<br>"); // false 나옴
+		
+		result = a > b || b > m || m <= n;
+		document.write(result + "<br>"); // true 나옴
+		
+		result = a <= b && b >= m && m <= n;
+		document.write(result + "<br>"); // false
+		
+		result = a <= b && b <= m && m <= n;
+		document.write(result + "<br>"); // true
+		
+		result = !(a > b); 
+		document.write(result + "<br>"); // true
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
