@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8">
+	<title>함수 test 2</title>
+	<script type="text/javascript">
+		var color = ["white", "lightblue", "dodgerblue", "darkblue"];
+		
+		var i = 0;
+		function changeColor() {
+			i++;
+			if(i >= color.length){
+				i = 0; // 다시 white로 돌아감
+			}
+			var bodyTag = document.getElementById("theBody"); // id가 theBody인 객체 Body를 의미
+			bodyTag.style.backgroundColor = color[i];
+		}
+	</script>
+</head>
+<body id = "theBody">
+	<button onclick="changeColor();">배경색 바꾸기</button>
+</body>
+</html>

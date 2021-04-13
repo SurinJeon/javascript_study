@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8">
+	<title>함수 test 5</title>
+	<script type="text/javascript">
+		function sum() {
+			var sum = arguments[0] + arguments[1] + arguments[2];
+			document.write("sum >> " + sum + "<br>");
+		}
+		
+		sum(10, 20, 30);
+		
+		// 혹은 이렇게도 가능
+		
+		function total() {
+			var total = 0;
+			for (var i = 0; i < arguments.length; i++){
+				total += arguments[i];
+			}
+			
+			document.write("total >> " + total + "<br>");
+		}
+		
+		total(40, 50, 60);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

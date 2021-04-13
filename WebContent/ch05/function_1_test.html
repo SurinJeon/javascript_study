@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8">
+	<title>함수 test 1</title>
+	<script type="text/javascript">
+		var count = 0;
+		
+		myFnc();
+		
+		function myFnc() {
+			count++;
+			document.write("hello" + count + "<br>");
+		}
+		
+		myFnc();
+		
+		// function()을 참조변수에 한번 담으면, 위치상 정의가 되기 전에 호출하는 문장이 올 수 없음(반드시 정의보다 호출이 아래로 가야함)
+		var theFnc = function() {
+			count++;
+			document.write("bye" + count + "<br>");
+		}
+		
+		theFnc();
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
