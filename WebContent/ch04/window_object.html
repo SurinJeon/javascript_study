@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8">
+	<title>정지 버튼 누르기</title>
+	<script type="text/javascript">
+		var addNum = 0;
+		var subNum = 1000;
+		
+		var auto_1 = setInterval(function() {
+			addNum++;
+			console.log("addNum >> " + addNum);
+		}, 3000); // 아래에서 버튼 정지 시키기 위해서 setInterval에 auto_1이라고 이름을 붙여준 것
+		
+		var auto_2 = setInterval(function() {
+			subNum--;
+			console.log("subNum >> " + subNum);
+		}, 3000);
+		
+		// setTimeout은 setInterval과 다르게 딱 한 번 수행됨
+		var addNum2 = 0;
+		var auto = setTimeout(function() {
+			addNum2++;
+			console.log("addNum2 >> " + addNum2);
+		}, 5000);
+	</script>
+	
+</head>
+<body>
+	<button onclick="clearInterval(auto_1)">증가 정지</button>
+	<button onclick="clearInterval(auto_2)">감소 정지</button>
+</body>
+</html>
