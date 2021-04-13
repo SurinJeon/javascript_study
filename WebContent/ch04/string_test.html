@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8">
+	<title>문자열 객채</title>
+	<script type="text/javascript">
+	
+		document.write("<h3>문자열 객체 메소드와 속성</h3>")
+		var t = "Hello Thank you good luck to you";
+		document.write(t.charAt(16) + "<br>");
+		document.write(t.indexOf("you") + "<br>");
+		document.write(t.indexOf("you", 16) + "<br>");
+		document.write(t.lastIndexOf("you") + "<br>");
+		document.write(t.lastIndexOf("you", 25) + "<br>");
+		document.write(t.match("luck") + "<br>");
+		document.write(t.search("you") + "<br>");
+		document.write(t.substr(21, 4) + "<br>");
+		document.write(t.substring(6, 12) + "<br>");
+		document.write(t.replace("you", "me") + "<br>");
+		document.write(t.toLowerCase() + "<br>");
+		document.write(t.toUpperCase() + "<br>");
+		document.write(t.length + "<br>"); // 공백도 카운트함
+		
+		var s = t.split(" "); // 공백을 기준으로 문자 분리
+		document.write(s[0] + "<br>");
+		document.write(s[4] + "<br>");
+		
+		var str = "A";
+		var t = str.charCodeAt(0);
+		document.write(t + "<br>");
+		
+		t = str.charCodeAt();
+		document.write(t + "<br>"); // 둘다 똑같이 65 나오긴 함
+		
+		document.write(String.fromCharCode(65) + "<br>")
+		
+		document.write("<h3>방문자의 이름과 연락처</h3>")
+		
+		var username = prompt("당신의 영문 이름은?", "");
+		
+		var upperName = username.toUpperCase();
+		document.write(upperName + "<br>");
+		
+		var userNum = prompt("당신의 연락처는?", "");
+		var result = userNum.substring(0, userNum.length - 4) + "****"; // 뒤에 네 자리를 *로 대체함
+		document.write(result + "<br>");
+		
+		document.write("<h3>이메일 유효성 검사</h3>");
+		var userEmail = prompt("당신의 이메일 주소는?", "");
+		var arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+		
+		var check1 = false;
+		var check2 = false;
+		
+		if (userEmail.indexOf("@") > 0){
+			check1 = true; // @를 정상적으로 작성했으면 check1은 true
+			
+			for(var i = 0; i < arrUrl.length; i++){
+				if(userEmail.indexOf(arrUrl[i]) > 0){
+					check2 = true; // arrUrl에 해당하는 값 있으면 check2도 true
+				}
+			}
+			
+		}
+		
+		if(check1 && check2){
+			document.write(userEmail)
+		} else{
+			alert("이메일 형식이 잘못되었습니다.");
+		}
+			
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
