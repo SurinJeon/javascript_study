@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8">
+	<title>map/grep</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(function() {
+			var arr1= [
+				{"area" : "서울", "name" : "짱수린"},
+				{"area" : "대전", "name" : "짱사장"},
+				{"area" : "서울", "name" : "짱짱짱"}
+			];
+			
+			var arr2 = $.map(arr1, function(a, b) {
+				if(a.area == "서울"){
+					return a;
+				}
+			});
+			
+			console.log("=========First=========")
+			console.log(arr2);
+			
+			
+			var arr3 = $.grep(arr1, function(a, b) {
+				if(a.area == "서울"){
+					return true;
+				} else{
+					return false;
+				}
+			});
+			
+			console.log("=========Second=========")
+			console.log(arr3)			
+		})		
+	</script>
+</head>
+<body>
+</body>
+</html>
