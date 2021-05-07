@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+body{
+	margin: 0; /* 여백 모두 날리기 */
+	font-family: "Noto Sans KR", sans-serif;
+	color: #222;
+	line-height: 1.6em;
+	background-color: #f4f4f4;
+	font-weight: 300;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	
+}
+
+section{
+	width: 800px;
+	
+}
+
+.heading h1{
+	text-align: center;	
+	font-size: 30px;
+}
+
+.heading span{
+	color: Crimson;
+}
+
+.heading input[type=text]{
+	outline: none;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 2px solid #ddd;
+	background: #fff url("../img/search-icon.png") no-repeat center left 5px;
+	background-size: 23px;
+	padding-left: 35px;
+}
+
+.heading input[type=text]::placeholder{
+	font-style: italic;	
+	transition: 0.5s;
+}
+
+.heading input[type=text]:focus::placeholder{
+	opacity: 0;
+}
+
+.tab-inner{
+	margin-top: 30px; 
+	
+}
+
+.btn{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.btn li{
+	float: left;
+/* 	border: 1px solid #000; */
+/* 	padding: 5px; */
+	width: 158px;
+	text-align: center;
+	border-right: 1px solid DimGray;
+	border-top: 2px solid transparent; /* hover 들어갔을때 메뉴바 움직이는거 막기 위해서 미리 border 너비 주고 안 보이게 만듦 */
+	font-size: 14px;
+	
+}
+
+.btn li:last-child{
+	width: 163.5px; /*마지막은 글자가 길어서 더 넓이를 줌*/
+	border-right: none;
+}
+
+.btn li:hover{
+	background-color: #fff;
+	border-top: 2px solid DimGray;
+}
+
+.btn li.active{
+	background-color: #fff;
+	border-top: 2px solid DimGray;
+}
+
+.tabs{}
+
+.tabs div{
+	background-color: #fff;
+	padding: 20px;
+	box-sizing: border-box; /* box 크기가 글자수에 따라서 변하지 않음(고정된 크기) */
+	display: none;
+}
+
+.tabs div.active{
+	display: block;
+}
+
+/* tab content 영역 */
+.tabs div h2{
+	text-align: center;
+}
+
+.tabs div img{
+	float: left;
+	margin-right: 10px;
+}
+
+.tabs div p{
+	overflow: hidden; /* 밑에 삐죽 튀어나오는 부분을 그냥 줄 맞추서 넣기 위함 */
+}
+
+
+
+
+
+
+
+
+
+
+
+

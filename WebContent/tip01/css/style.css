@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+body{
+	font-family: 'Noto Sans KR', sans-serif; 
+	/* 아래 두줄 같이 쓰면 수평 가운데 정렬 됨*/
+	display: flex;
+	justify-content: center;
+	
+	/* 이것도 추가하면 수직 정렬 << 다 해서 정가운데 정렬가능 */ 
+	align-items: center;
+	height: 100vh; /* 모니터 화면을 100vh로 보통 표기함 */
+	
+	font-size: 16px;
+}
+
+.star-rating{
+	background-color: #333;
+	width: 300px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.star-rating div{
+	float: left;
+	width: 50%; /* 별 영역과 글자 영역 각각 50퍼 되도록 */
+}
+
+.stars{
+
+}
+
+.stars .fa{
+	font-size: 18px;
+	cursor: pointer; /* 별모양 위에 커서 올릴때, a태그 아니여도 알아서 커서 바뀜 */
+}
+
+.stars .fa.active{ /* star 밑의 fa가 active 존재한다면! */
+	color: yellow;
+	text-shadow: 0 0 5px yellow;
+}
+.print{
+	color: #fff;
+}
+
+
+
+
+
+

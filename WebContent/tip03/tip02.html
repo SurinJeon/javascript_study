@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+		$(function(){
+			$(".btn li").click(function() {
+				$(this).addClass("active");
+				$(this).siblings().removeClass("active");
+				
+				var tab_idx = $(this).index();
+				
+				$(".tabs div").removeClass("active");
+				$(".tabs div").eq(tab_idx).addClass("active");	
+				
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<section>
+
+		<div class="heading">
+			<h1>
+				<span>웹 개발자</span>, 탭 메뉴 Tip & Tech
+			</h1>
+			<input type="text" placeholder="What are you looking for?">
+		</div>
+
+		<div class="tab-inner">
+			<ul class="btn">
+				<li class="active">HTML5</li>
+				<li>CSS3</li>
+				<li>JQUERY</li>
+				<li>JAVASCRIPT</li>
+				<li>CSS FRAMEWORKS</li>
+			</ul>
+			<div class="tabs">
+				<div class="active">
+					<h2>HTML5</h2>
+					<img alt="html 이미지" src="img/platform-logo-01.png">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis feugiat ex. 
+					Mauris eget mauris sit amet est sodales pellentesque non eget magna. 
+					Integer hendrerit fringilla commodo. Nunc a tempor mi. Ut dapibus suscipit interdum. 
+					Pellentesque nec enim purus. Sed in sollicitudin eros, a cursus nisl. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					Integer placerat risus est, eget pulvinar urna consectetur non. 
+					Curabitur felis quam, feugiat at sem eget, faucibus pulvinar augue. 
+					Donec porta commodo fermentum. Aenean laoreet, massa imperdiet condimentum ultrices, 
+					ante diam facilisis ex, quis feugiat ex mauris ut ipsum. Morbi facilisis nulla nec risus pharetra, 
+					eu pretium magna dignissim. Sed elementum at nisl in pharetra. Nullam tempor justo est, eget rutrum lectus hendrerit in.</p>
+				</div>
+				<div>
+					<h2>CSS3</h2>
+					<img alt="html 이미지" src="img/platform-logo-02.png">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis feugiat ex. 
+					Mauris eget mauris sit amet est sodales pellentesque non eget magna. 
+					Integer hendrerit fringilla commodo. Nunc a tempor mi. Ut dapibus suscipit interdum. 
+					Pellentesque nec enim purus. Sed in sollicitudin eros, a cursus nisl. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					Integer placerat risus est, eget pulvinar urna consectetur non. 
+					Curabitur felis quam, feugiat at sem eget, faucibus pulvinar augue. 
+					Donec porta commodo fermentum. Aenean laoreet, massa imperdiet condimentum ultrices, 
+					ante diam facilisis ex, quis feugiat ex mauris ut ipsum. Morbi facilisis nulla nec risus pharetra, 
+					eu pretium magna dignissim. Sed elementum at nisl in pharetra. Nullam tempor justo est, eget rutrum lectus hendrerit in.</p>
+				</div>
+				<div>
+					<h2>JQUERY</h2>
+					<img alt="html 이미지" src="img/platform-logo-03.png">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis feugiat ex. 
+					Mauris eget mauris sit amet est sodales pellentesque non eget magna. 
+					Integer hendrerit fringilla commodo. Nunc a tempor mi. Ut dapibus suscipit interdum. 
+					Pellentesque nec enim purus. Sed in sollicitudin eros, a cursus nisl. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					Integer placerat risus est, eget pulvinar urna consectetur non. 
+					Curabitur felis quam, feugiat at sem eget, faucibus pulvinar augue. 
+					Donec porta commodo fermentum. Aenean laoreet, massa imperdiet condimentum ultrices, 
+					ante diam facilisis ex, quis feugiat ex mauris ut ipsum. Morbi facilisis nulla nec risus pharetra, 
+					eu pretium magna dignissim. Sed elementum at nisl in pharetra. Nullam tempor justo est, eget rutrum lectus hendrerit in.</p>
+				</div>
+				<div>
+					<h2>JAVASCRIPT</h2>
+					<img alt="html 이미지" src="img/platform-logo-04.png">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis feugiat ex. 
+					Mauris eget mauris sit amet est sodales pellentesque non eget magna. 
+					Integer hendrerit fringilla commodo. Nunc a tempor mi. Ut dapibus suscipit interdum. 
+					Pellentesque nec enim purus. Sed in sollicitudin eros, a cursus nisl. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					Integer placerat risus est, eget pulvinar urna consectetur non. 
+					Curabitur felis quam, feugiat at sem eget, faucibus pulvinar augue. 
+					Donec porta commodo fermentum. Aenean laoreet, massa imperdiet condimentum ultrices, 
+					ante diam facilisis ex, quis feugiat ex mauris ut ipsum. Morbi facilisis nulla nec risus pharetra, 
+					eu pretium magna dignissim. Sed elementum at nisl in pharetra. Nullam tempor justo est, eget rutrum lectus hendrerit in.</p>
+				</div>
+				<div>
+					<h2>CSS FRAMEWORKS</h2>
+					<img alt="html 이미지" src="img/platform-logo-05.png">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis feugiat ex. 
+					Mauris eget mauris sit amet est sodales pellentesque non eget magna. 
+					Integer hendrerit fringilla commodo. Nunc a tempor mi. Ut dapibus suscipit interdum. 
+					Pellentesque nec enim purus. Sed in sollicitudin eros, a cursus nisl. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					Integer placerat risus est, eget pulvinar urna consectetur non. 
+					Curabitur felis quam, feugiat at sem eget, faucibus pulvinar augue. 
+					Donec porta commodo fermentum. Aenean laoreet, massa imperdiet condimentum ultrices, 
+					ante diam facilisis ex, quis feugiat ex mauris ut ipsum. Morbi facilisis nulla nec risus pharetra, 
+					eu pretium magna dignissim. Sed elementum at nisl in pharetra. Nullam tempor justo est, eget rutrum lectus hendrerit in.</p>
+				</div>
+			</div>
+		</div>
+
+	</section>
+</body>
+</html>

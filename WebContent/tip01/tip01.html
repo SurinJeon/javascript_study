@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8">
+	<title>별점주기 with jquery</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript">
+		$(function(){
+			$(".stars .fa").click(function() {
+				$(this).addClass("active");
+				$(this).prevAll().addClass("active");
+				$(this).nextAll().removeClass("active");
+				
+				var starRate = $(this).index() + 1;
+
+				var notice = ['Bad', 'Not Bad', 'So So', 'Like', 'Love it!'];
+				
+				$(".print").html('<img src = "img/star-lv' + starRate + '.png">' + notice[starRate - 1]);
+				
+// 다시 클릭하면 새로고침상태로 만드는거 해보기
+// 				if($(this).hasClass("active")){
+// 					$(this).removeClass("active");
+// 					$(this).prevAll().removeClass("active");
+// 				}
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	<div class="star-rating">
+		<div class="stars">
+			<i class="fa fa-star"></i> <!-- fa << fontawesome임 (폰트로 인식함) -->
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+		</div>
+		
+		<div class="print">별점을 매겨주세요.</div>
+	</div>
+</body>
+</html>

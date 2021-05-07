@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="css/prototype.css">
+	<script>
+		$(function(){
+			$(".btn li").click(function() {
+				$(this).addClass("active");
+				$(this).siblings().removeClass("active");
+				var tab = $(this).attr("data-alt"); // 사용자 정의 속성
+				
+				/* alert(tab); << 확인용 alert */
+				
+				/*
+				$(".tabs div").removeClass("active"); // 모두 일단 삭제시킴
+				
+				// 이제 추가
+				$("#" + tab).addClass("active"); // "#"이 있어야 들어감~! 포인트~!
+				*/
+				
+				// 더 쉬운 방법
+				
+				var tab_idx = $(this).index();
+				
+				$(".tabs div").removeClass("active");
+				$(".tabs div").eq(tab_idx).addClass("active");	
+				
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<section>
+		<ul class="btn">
+			<li class="active">HTML5</li>
+			<li>CSS3</li>
+			<li>JQUERY</li>
+			<li>JAVASCRIPT</li>
+			<li>CSS FRAMEWORKS</li>
+		</ul>
+		
+		<div class="tabs">
+			<div class="active">tab1</div>
+			<div>tab2</div>
+			<div>tab3</div>
+			<div>tab4</div>
+			<div>tab5</div>
+		</div>
+	</section>
+</body>
+</html>
