@@ -7,24 +7,31 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript">
 		$(function(){
-			$(".stars .fa").click(function() {
-				$(this).addClass("active");
-				$(this).prevAll().addClass("active");
-				$(this).nextAll().removeClass("active");
+			if(!$(this).hasClass("active")){
 				
-				var starRate = $(this).index() + 1;
-
-				var notice = ['Bad', 'Not Bad', 'So So', 'Like', 'Love it!'];
+				$(".stars .fa").click(function() {
+					if($(this).hasClass)
+					$(this).addClass("active");
+					$(this).prevAll().addClass("active");
+					$(this).nextAll().removeClass("active");
+					
+					var starRate = $(this).index() + 1;
+	
+					var notice = ['Bad', 'Not Bad', 'So So', 'Like', 'Love it!'];
+					
+					$(".print").html('<img src = "img/star-lv' + starRate + '.png">' + notice[starRate - 1]);
+				});
+			}
+			
+			if($(this).hasClass("active")){
+				$(".stars .fa").click(function() {
+					$(this).removeClass("active");
+					$(this).prevAll().removeClass("active");
+				});
+			}
 				
-				$(".print").html('<img src = "img/star-lv' + starRate + '.png">' + notice[starRate - 1]);
-				
-// 다시 클릭하면 새로고침상태로 만드는거 해보기
-// 				if($(this).hasClass("active")){
-// 					$(this).removeClass("active");
-// 					$(this).prevAll().removeClass("active");
-// 				}
 			});
-		});
+// 		});
 		
 	</script>
 </head>

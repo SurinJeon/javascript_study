@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+body{
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+.navi{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+/* 	여기까지는 좌상단이 정중앙에 오게했음 */
+	transform: translate(-50%, -50%); /* 좌상단 point가 정중앙이 아니라, navi자체가 중앙에 오도록 다시 조정하는 작업 */
+	
+	z-index: 100;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.navi li{
+}
+
+.navi li a{
+	position: relative;
+	font-size: 4em;
+	text-decoration: none;
+	color: #fff;
+}
+
+.navi li a:after{ /* 글자 하나 더 씌워서 그 색깔을 바꿀 것임 */
+/* 	부모를 기준으로 작업하겠다라면, 부모는 relative, 자식은 absolute해줘야됨 */
+/*  여기서는 after나 before나 별 차이는 없음 */
+	position: absolute;
+	color: Yellowgreen;
+	top: 0;
+	left: 0;
+	
+	width: 10%; /* 너비의 10% 의미 */
+ 	overflow: hidden; /* 이것 처리하지 않으면 노란색으로 전체 다 채워져버림 */
+	
+	content: attr(data-text);
+	transition: 0.5s;
+}
+
+.navi li a:hover:after{
+	width: 100%;
+}
+
+.navi li a:focus:after{ /* keyboard로 접근했을 때에도 되도록 함 */
+	width: 100%;
+}
+
+
+.photo{
+/* 	좌표찍기 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;	
+	
+	/* background-image 나 background는 똑같은데 대신 image로 하면 저 no-repeat center center 이거 다 따로 설정해줘야됨... */
+	background: url("../img/portrait-initial.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

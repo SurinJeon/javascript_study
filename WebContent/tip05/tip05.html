@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- 	<script src="js/tip05.js"></script> -->
+
+	<script type="text/javascript">
+		$(function() {
+			$(".size span, .color span").click(function() {
+				$(this).addClass("active");
+				$(this).siblings().removeClass("active"); /* 원래 적용되어 있던건 다 사라지게 */
+			});
+			
+			$(".like").click(function() {
+				$(this).toggleClass("active");
+			});
+		});
+	</script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="item">
+		<img alt="모델사진" src="img/model-female.png">
+		<div class="detail">
+			<div class="title">
+				<h2>
+					<em>Nightgown</em> Women's Designer Wear
+				</h2>
+				<span class="price">$55.99</span>
+			</div>
+			<div class="info">
+				<div class="size">
+					<label>Sizes</label> <span class="active">XS</span><span>S</span><span>M</span><span>L</span><span>XL</span>
+				</div>
+				<div class="color">
+					<label>Colors</label> <span class="active"></span><span></span><span></span><span></span><span></span>
+				</div>
+				<span class="like"></span> <!-- class 두개임 -->
+			</div>
+			<button class="add-cart">Add to Cart</button>
+		</div>
+	</div>
+</body>
+</html>
